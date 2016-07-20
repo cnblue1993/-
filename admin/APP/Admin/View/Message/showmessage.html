@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>消息查看</title>
+		<meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="__PUBLIC__/Css/bootstrap.min.css" />
+		<link rel="stylesheet" href="__PUBLIC__/Css/bootstrap-responsive.min.css" />
+		<link rel="stylesheet" href="__PUBLIC__/Css/uniform.css" />
+		<link rel="stylesheet" href="__PUBLIC__/Css/select2.css" />		
+		<link rel="stylesheet" href="__PUBLIC__/Css/unicorn.main.css" />
+		<link rel="stylesheet" href="__PUBLIC__/Css/unicorn.grey.css" class="skin-color" />	
+		<js href="__PUBLIC__/Js/jquery-2.0.2.js" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /></head>
+	<body>
+		
+	
+
+
+			<div class="container-fluid">
+				<div class="row-fluid">
+					<div class="span12">
+						<div class="widget-box">
+							<div class="widget-title">
+								<span class="icon">
+									<i class="icon-align-justify"></i>									
+								</span>
+								<h5>消息查看</h5>
+							</div>
+							<div class="widget-content nopadding">
+								<table class="table table-bordered data-table" boder=1>
+									<tbody>
+											<tr class="gradeX">
+											<td style="text-align:center;width:10%">消息类型</td>
+											<if condition="$message.m_type eq 1">
+												<td style="text-align:center">通知</td>
+											<else/>
+												<td style="text-align:center">社区活动</td>
+											</if>
+											</tr>
+
+										<tr class="gradeX">
+											<td style="text-align:center;width:10%">消息标题</td>
+											<td style="text-align:center">{$message.m_title}</td>
+										</tr>
+										<tr class="gradeX">
+											<td style="text-align:center;width:10%">消息内容</td>
+											<td >{$message.m_content}</td>
+										</tr>
+									</tbody>
+									</table>                  
+							</div>
+						</div>
+					</div>
+
+				</div>
+
+				<div class="row-fluid">
+					<div id="footer" class="span12">
+						2012 ustc
+					</div>
+				</div>
+			</div>
+
+		
+		
+            
+            <script src="__PUBLIC__/Js/jquery.min.js"></script>
+            <script src="__PUBLIC__/Js/jquery.ui.custom.js"></script>
+            <script src="__PUBLIC__/Js/bootstrap.min.js"></script>
+            <script src="__PUBLIC__/Js/bootstrap-colorpicker.js"></script>
+            <script src="__PUBLIC__/Js/bootstrap-datepicker.js"></script>
+            <script src="__PUBLIC__/Js/jquery.uniform.js"></script>
+            <script src="__PUBLIC__/Js/select2.min.js"></script>
+            <script src="__PUBLIC__/Js/unicorn.js"></script>
+            <script src="__PUBLIC__/Js/unicorn.form_common.js"></script>
+	</body>
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>住户修改</title>
+		<meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="__PUBLIC__/Css/bootstrap.min.css" />
+		<link rel="stylesheet" href="__PUBLIC__/Css/bootstrap-responsive.min.css" />
+        <link rel="stylesheet" href="__PUBLIC__/Css/colorpicker.css" />
+        <link rel="stylesheet" href="__PUBLIC__/Css/datepicker.css" />
+		<link rel="stylesheet" href="__PUBLIC__/Css/uniform.css" />
+		<link rel="stylesheet" href="__PUBLIC__/Css/select2.css" />		
+		<link rel="stylesheet" href="__PUBLIC__/Css/unicorn.main.css" />
+		<link rel="stylesheet" href="__PUBLIC__/Css/unicorn.grey.css" class="skin-color" />	
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /></head>
+	<body>
+			<div class="container-fluid">
+				<div class="row-fluid">
+					<div class="span12">
+						<div class="widget-box">
+							<div class="widget-title">
+								<span class="icon">
+									<i class="icon-align-justify"></i>									
+								</span>
+								<h5>住户修改</h5>
+							</div>
+							<div class="widget-content nopadding">
+								<form method="post" action="{:U('Admin/Resident/modify')}" class="form-horizontal" />
+									<div class="control-group">
+										<label class="control-label">姓名：</label>
+										<div class="controls">
+											<input type="text" name="name" placeholder="{$resident.r_name}"/>
+										</div>
+									</div>
+									<div class="control-group">
+										<label class="control-label">身份证：</label>
+										<div class="controls">
+											<input type="text" name="identity" placeholder="{$resident.r_identity}"/>
+										</div>
+									</div>
+									<div class="control-group">
+										<label class="control-label">栋：</label>
+										<div class="controls">
+											<input type="text" name="zone" placeholder="{$resident.r_zone}"/>
+										</div>
+									</div>
+									<div class="control-group">
+										<label class="control-label">单元：</label>
+										<div class="controls">
+											<input type="text" placeholder="{$resident.r_unit}" name="unit"/>
+										</div>
+									</div>
+									<div class="control-group">
+										<label class="control-label">室：</label>
+										<div class="controls">
+											<input type="text" placeholder="{$resident.r_room}" name="room"/>
+										</div>
+									</div>
+									<div class="control-group">
+										<label class="control-label">手机：</label>
+										<div class="controls">
+											<input type="text" placeholder="{$resident.r_tel}" name="tel"/>
+										</div>
+									</div>
+									<div class="control-group">
+										<label class="control-label">人数：</label>
+										<div class="controls">
+											<input type="text" placeholder="{$resident.r_people}" name="people"/>
+										</div>
+									</div>
+									<div class="control-group">
+										<label class="control-label">蓝牙密钥：</label>
+										<div class="controls">
+											<input type="text" placeholder="{$resident.r_key}" name="key"/>
+										</div>
+									</div>
+									<div class="form-actions">
+										<button type="submit" class="btn btn-primary" name="save">保存</button>
+									</div>
+									<div >
+										<input type="hidden" name="id" value="{$resident.r_id}"></input>
+									</div>
+								</form>
+							</div>
+						</div>						
+					</div>
+				</div>
+				
+				<div class="row-fluid">
+					<div id="footer" class="span12">
+						2015 ustc
+					</div>
+				</div>
+			</div>
+		
+		
+            
+            <script src="__PUBLIC__/Js/jquery.min.js"></script>
+            <script src="__PUBLIC__/Js/jquery.ui.custom.js"></script>
+            <script src="__PUBLIC__/Js/bootstrap.min.js"></script>
+            <script src="__PUBLIC__/Js/bootstrap-colorpicker.js"></script>
+            <script src="__PUBLIC__/Js/bootstrap-datepicker.js"></script>
+            <script src="__PUBLIC__/Js/jquery.uniform.js"></script>
+            <script src="__PUBLIC__/Js/select2.min.js"></script>
+            <script src="__PUBLIC__/Js/unicorn.js"></script>
+            <script src="__PUBLIC__/Js/unicorn.form_common.js"></script>
+	</body>
+</html>

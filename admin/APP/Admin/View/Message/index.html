@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>消息查看</title>
+		<meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="__PUBLIC__/Css/bootstrap.min.css" />
+		<link rel="stylesheet" href="__PUBLIC__/Css/bootstrap-responsive.min.css" />
+		<link rel="stylesheet" href="__PUBLIC__/Css/uniform.css" />
+		<link rel="stylesheet" href="__PUBLIC__/Css/select2.css" />		
+		<link rel="stylesheet" href="__PUBLIC__/Css/unicorn.main.css" />
+		<link rel="stylesheet" href="__PUBLIC__/Css/unicorn.grey.css" class="skin-color" />	
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /></head>
+
+	<body>
+
+		
+			<div class="container-fluid">
+				<div class="row-fluid">
+					<div class="span12">
+						<div class="widget-box">
+							<div class="widget-title">
+								<span class="icon">
+									<i class="icon-align-justify"></i>									
+								</span>
+								<h5>海报图片</h5>
+							</div>
+							<div class="widget-content nopadding">
+									<div class="control-group">
+										<table class="table table-bordered data-table">
+										<php>
+											$num=array("一","二","三","四","五","六","七","八","九","十");
+										</php>
+										<thead>
+											<tr>
+											<foreach name='picture' item='p'>
+											<php>$i=$p['m_title']-1;</php>
+											<th>图片{$num[$i]}</th>
+											</foreach>
+											</tr>
+										</thead>
+										<tbody>
+											<tr class="gradeX">
+												<foreach name='picture' item='p'>
+													<td style="text-align:center"><img src="__ROOT__/App/Picture/{$p.m_content}.jpg" alt="" /></td>
+												</foreach>
+											</tr>
+										</tbody>
+									</table> 
+									</div>
+							</div>
+						</div>						
+					</div>
+				</div>
+				<div class="row-fluid">
+					<div class="span12">
+						<div class="widget-box">
+							<div class="widget-title">
+								<span class="icon">
+									<i class="icon-align-justify"></i>									
+								</span>
+								<h5>消息</h5>
+							</div>
+							<div class="widget-content nopadding">
+									<div class="control-group">
+										<table style="table-layout:fixed;border-collapse:collapse;"  class="table table-bordered data-table">
+										<thead>
+											<tr>
+											<th>消息类型</th>
+											<th>消息标题</th>
+											<th>消息内容</th>
+											<th>发布时间</th>
+											<th>发布人</th>
+											</tr>
+										</thead>
+										<tbody>
+											<foreach name='message1' item='m1'>
+												<tr class="gradeX">
+												<td style="text-align:center;width:5%;">通知</td>
+												<td style="text-align:center;width:10%;">{$m1.m_title}</td>
+												<td nowrap  style="text-align:center; width:50%;overflow:hidden;text-overflow:ellipsis;"><a href="{:U('Admin/Message/showmessage')}?m_id={$m1.m_id};">{$m1.m_content}</a></td>
+												<td style="text-align:center;width:10%;">{$m1.m_date}</td>
+												<td style="text-align:center;width:10%;">{$m1.m_admin}</td>
+											</foreach>
+											<foreach name='message2' item='m2'>
+												<tr class="gradeX">
+												<td style="text-align:center">社区活动</td>
+												<td style="text-align:center">{$m2.m_title}</td>
+												<td nowrap  style="text-align:center; width:50%;overflow:hidden;text-overflow:ellipsis;"><a href="{:U('Admin/Message/showmessage')}?m_id={$m2.m_id};">{$m2.m_content}</a></td>
+												<td style="text-align:center">{$m2.m_date}</td>
+												<td style="text-align:center">{$m2.m_admin}</td>
+											</foreach>
+										</tbody>
+									</table> 
+									</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="row-fluid">
+					<div id="footer" class="span12">
+						2012 ustc
+				</div>
+			</div>
+		
+		
+            
+            <script src="__PUBLIC__/Js/jquery.min.js"></script>
+            <script src="__PUBLIC__/Js/jquery.ui.custom.js"></script>
+            <script src="__PUBLIC__/Js/bootstrap.min.js"></script>
+            <script src="__PUBLIC__/Js/bootstrap-colorpicker.js"></script>
+            <script src="__PUBLIC__/Js/bootstrap-datepicker.js"></script>
+            <script src="__PUBLIC__/Js/jquery.uniform.js"></script>
+            <script src="__PUBLIC__/Js/select2.min.js"></script>
+            <script src="__PUBLIC__/Js/unicorn.js"></script>
+            <script src="__PUBLIC__/Js/unicorn.form_common.js"></script>
+	</body>
+</html>

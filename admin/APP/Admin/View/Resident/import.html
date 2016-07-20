@@ -1,0 +1,27 @@
+<html>
+<head>
+	<meta http-equiv="Content-Type" CONTENT="text/html;charset=utf-8">
+	<meta http-equiv="content-language" content="utf-8" />
+</head>
+<body>
+<script language="JavaScript" type="text/JavaScript">
+function process(){
+	var time=document.getElementById("timer");
+	time.innerHTML="导入中，请稍后。。。";
+}
+</script>
+<div id="main">
+<form method="post" action="{:U('Admin/Resident/runexcel')}" enctype="multipart/form-data">
+<table style="width:95%" border=0>
+<tr>
+<td align="left" >导入Excel表：</td>
+<td align="left" width="40%"><input  type="file" name="file_stu" style="zoom:120%"/></td>
+<td align="left"><input  type="submit" class="submit" style="zoom:120%" value="导入" onclick="process()"/></td>
+</tr>
+</table>
+</form>
+<div id="timer" style="font-size:18px">
+</div>
+</div>
+</body>
+</html>

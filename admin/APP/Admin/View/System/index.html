@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Unicorn Admin</title>
+		<meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="__PUBLIC__/Css/bootstrap.min.css" />
+		<link rel="stylesheet" href="__PUBLIC__/Css/bootstrap-responsive.min.css" />
+		<link rel="stylesheet" href="__PUBLIC__/Css/uniform.css" />	
+		<link rel="stylesheet" href="__PUBLIC__/Css/unicorn.main.css" />
+		<link rel="stylesheet" href="__PUBLIC__/Css/unicorn.grey.css" class="skin-color" />	
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /></head>
+	<body style="text-align:center;">
+		
+		<div style="background-color: #ffffff;border-color: #aaaaaa;height:500px;text-align:center" >
+			<div class="container-fluid">
+				<div class="row-fluid">
+					<div class="span12">
+						<div class="widget-box">
+							<div class="widget-title">
+								<span class="icon">
+									<i class="icon-th"></i>
+								</span>
+								<h5>系统信息</h5>
+							</div>
+							<div class="widget-content nopadding">
+								<form method="post" action="{:U('Admin/System/modify')}" class="form-horizontal" />
+									<table class="table table-bordered table-striped" style="margin:auto">
+										<foreach name='info' item='i'>
+											<tr>
+												<th style="text-align:center;font-size:14px" >{$i.info_type}</th>
+												<td style="text-align:left"><input type="text" name="{$i.info_type}" value="{$i.info_content}"/></td>
+											</tr>
+											
+										</foreach>
+									</table>	
+									<div class="form-actions">
+										<button type="submit" class="btn btn-primary" name="save">保存</button>
+									</div>
+								</form>						
+							</div>
+						</div>
+					</div>
+				</div>
+				
+			</div>
+		</div>
+		
+	</body>
+</html>

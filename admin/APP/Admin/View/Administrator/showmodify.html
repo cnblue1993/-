@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>修改管理员</title>
+		<meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="__PUBLIC__/Css/bootstrap.min.css" />
+		<link rel="stylesheet" href="__PUBLIC__/Css/bootstrap-responsive.min.css" />
+		<link rel="stylesheet" href="__PUBLIC__/Css/uniform.css" />
+		<link rel="stylesheet" href="__PUBLIC__/Css/select2.css" />		
+		<link rel="stylesheet" href="__PUBLIC__/Css/unicorn.main.css" />
+		<link rel="stylesheet" href="__PUBLIC__/Css/unicorn.grey.css" class="skin-color" />	
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /></head>
+	<body>
+		<div style="background-color: #ffffff;border-color: #aaaaaa;height:500px;text-align:center" >
+			
+					<div class="row-fluid">
+						<div class="span12">
+							<div class="widget-box">
+								<div class="widget-title">
+									<span class="icon">
+										<i class="icon-align-justify"></i>									
+									</span>
+									<h5>修改管理员</h5>
+								</div>
+								<div class="widget-content nopadding">
+									<form class="form-horizontal" method="post" action="{:U('Admin/Administrator/modify')}" name="password_validate" id="password_validate" novalidate="novalidate" />
+									<input type="hidden" name='a_id' value="{$a_id}">
+										<div class="control-group">
+	                                        <label class="control-label">管理员名</label>
+	                                        <div class="controls">
+	                                            <input type="text" name="name" id="name" placeholder="{$name}"/>
+	                                        </div>
+                                    	</div>
+                                    	<div class="control-group">
+											<label class="control-label">旧密码</label>
+											<div class="controls">
+												<input type="password" name="oldpwd" id="oldpwd" />
+											</div>
+										</div>
+										<div class="control-group">
+											<label class="control-label">新密码</label>
+											<div class="controls">
+												<input type="password" name="pwd" id="pwd" />
+											</div>
+										</div>
+										<div class="control-group">
+											<label class="control-label">确认密码</label>
+											<div class="controls">
+												<input type="password" name="pwd2" id="pwd2" />
+											</div>
+										</div>
+										<div class="form-actions">
+											<input type="submit" value="提交" class="btn btn-primary" name="submit"/>
+										</div>
+									</form>
+								</div>
+							</div>
+						</div>			
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		
+            
+            <script src="__PUBLIC__/Js/jquery.min.js"></script>
+            <script src="__PUBLIC__/Js/jquery.ui.custom.js"></script>
+            <script src="__PUBLIC__/Js/bootstrap.min.js"></script>
+            <script src="__PUBLIC__/Js/jquery.uniform.js"></script>
+            <script src="__PUBLIC__/Js/select2.min.js"></script>
+            <script src="__PUBLIC__/Js/jquery.validate.js"></script>
+            <script src="__PUBLIC__/Js/unicorn.js"></script>
+            <script src="__PUBLIC__/Js/unicorn.form_validation.js"></script>
+	</body>
+</html>
